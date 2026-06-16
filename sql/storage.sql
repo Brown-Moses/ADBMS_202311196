@@ -16,7 +16,7 @@ SELECT
 Expected Output:
 database_name | database_size
 -------------------------------
-ulk_db        | 8.5 MB
+ulk_db        | 8839 kB
 */
 
 -- ============================================================

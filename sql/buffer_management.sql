@@ -58,7 +58,7 @@ Hash Join
   ->  Seq Scan on student    (Buffers: shared hit=3)
   ->  Hash
         ->  Seq Scan on department (Buffers: shared hit=1)
-Planning Time:  ~0.4 ms
+Planning Time:  ~0.1 ms
 Execution Time: ~0.3 ms
 
 "shared hit=4 read=0" means ALL 4 pages were found in shared_buffers.
@@ -103,10 +103,10 @@ ORDER BY buffer_hit_pct DESC NULLS LAST;
 Expected Output (after running several queries):
 table_name         | disk_reads | buffer_hits | total_accesses | buffer_hit_pct
 ---------------------------------------------------------------------------------
-department         | 1          | 15          | 16             | 93.75
-faculty            | 1          | 12          | 13             | 92.31
-course             | 2          | 18          | 20             | 90.00
-student            | 3          | 24          | 27             | 88.89
+department         | 1          | 25          | 26             | 96.15
+faculty            | 1          | 3           | 4              | 75.00
+course             | 2          | 4           | 5              | 80.00
+student            | 1          | 21          | 24             | 87.50
 enrollment         | 4          | 28          | 32             | 87.50
 
 Interpretation:
